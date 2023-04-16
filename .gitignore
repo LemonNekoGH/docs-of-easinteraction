@@ -1,0 +1,21 @@
+# NPM
+node_modules/
+
+# IDEA
+*.iml
+.idea/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+._*
+.Trash/
+.trash/
+
+.env
+.vitepress/cache
+
+# build output
+dist/
