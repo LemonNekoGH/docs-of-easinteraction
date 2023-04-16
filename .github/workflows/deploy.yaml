@@ -57,7 +57,7 @@ jobs:
       # used by official deploy action
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: dist
+          path: .vitepress/dist
 
   deploy:
     runs-on: ubuntu-latest

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build && echo 'docs.easi-gen.lemonneko.moe' > dist/CNAME",
+    "docs:build": "vitepress build && echo 'docs.easi-gen.lemonneko.moe' > .vitepress/dist/CNAME",
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
