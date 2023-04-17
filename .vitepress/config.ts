@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Docs of Easinteraction",
   description: "Easinteraction is a tool that help users to generate code for easier contract interaction.",
+  lastUpdated: true,
   themeConfig: {
     outline: 'deep',
     // https://vitepress.dev/reference/default-theme-config
@@ -20,6 +21,10 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/LemonNekoGH/docs-of-easinteraction/edit/main/:path'
+    }
   }
 })
