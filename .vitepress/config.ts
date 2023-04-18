@@ -16,6 +16,10 @@ export default defineConfig({
       {
         text: 'Installation',
         link: '/installation'
+      },
+      {
+        text: 'Usage',
+        link: '/usage'
       }
     ],
 

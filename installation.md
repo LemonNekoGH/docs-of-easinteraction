@@ -11,6 +11,8 @@ onMounted(() => {
       }}).then(it => tags.value = it.data[0])
 })
 </script>
+# Installation
+
 ::: warning
 This tool is still working in progress, not recommanded for production
 :::
