@@ -5,6 +5,9 @@ export default defineConfig({
   title: "Docs of Easinteraction",
   description: "Easinteraction is a tool that help users to generate code for easier contract interaction.",
   lastUpdated: true,
+  markdown: {
+    lineNumbers: true,
+  },
   themeConfig: {
     outline: 'deep',
     // https://vitepress.dev/reference/default-theme-config
@@ -20,6 +23,10 @@ export default defineConfig({
       {
         text: 'Usage',
         link: '/usage'
+      },
+      {
+        text: "About code generation",
+        link: "/about-code-generation.md"
       }
     ],
 

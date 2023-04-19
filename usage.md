@@ -2,6 +2,21 @@
 ## Single contract file input
 ### `--pkg-name`
 Specify the package name of output Go file, default is `mypackage`.
+```shell
+$ cat example.cdc | easi-gen --pkg-name example
+package example
+
+import (
+  ...
+)
+
+type ContractExample struct {
+  address string
+  flowCli *flowSdk.cli
+}
+...
+```
+
 ### `--source`
 Specify where to read Cadence file, default is `stdin`
 ```shell
@@ -13,7 +28,11 @@ $ cat <file> | easi-gen
 Specify where to write Go file, default is `stdout`
 ```shell
 $ cat example.cdc | easi-gen
-package example
+package mypackage
+
+import (
+  ...
+)
 
 type ContractExample struct {
   address string
@@ -24,7 +43,11 @@ type ContractExample struct {
 # or
 $ cat example.cdc | easi-gen > test.go
 $ cat test.go
-package example
+package mypackage
+
+import (
+  ...
+)
 
 type ContractExample struct {
   address string
@@ -36,7 +59,11 @@ If specified, `--output` must be a file, or not exists.
 ```shell
 $ easi-gen --source /path/to/example.cdc --output /path/to/test/mypackage/mypackage.go
 $ cat /path/to/test/mypackage/mypackage.go
-package example
+package mypackage
+
+import (
+  ...
+)
 
 type ContractExample struct {
   address string
@@ -49,6 +76,16 @@ Error: /path/to/json/mypackage is a folder
 ```
 ## Multiple contract files input
 There will be a object contains all contract file path in `flow.json` named `contracts`
+```json5
+{
+  "contracts": {
+    "Example": "./Example.cdc", // Form1
+    "Example2": {
+      "source": "./contracts/Example2.cdc" // Form2
+    }
+  }
+}
+```
 ### `--pkg-name`
 Specify the package name of output Go file, default is `mypackage`.
 ### `--source (required)`
