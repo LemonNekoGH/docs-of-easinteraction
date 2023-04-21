@@ -13,7 +13,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'godence', link: 'https://github.com/LemonNekoGH/godence' }
+      { text: 'Godence', link: 'https://github.com/LemonNekoGH/godence' },
+      { text: 'Roadmap', link: 'https://github.com/users/LemonNekoGH/projects/3/views/1' }
     ],
 
     sidebar: [
